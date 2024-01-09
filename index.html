@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://kit.fontawesome.com/80b59383d9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Elin Hedlund</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/grodan_logo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="project.html">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Digital Designer</p>
+          <h1>Hi there, I'm <span>Elin</span><br />Hedlund from Sweden</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ----------about----------- -->
+    <div id="About">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/me2.jpg">
+          </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu volutpat odio facilisis. Congue eu consequat ac felis donec et odio pellentesque diam. Eget magna fermentum iaculis eu. Egestas integer eget aliquet nibh. Dui faucibus in ornare quam viverra orci sagittis eu. Ut sem viverra aliquet eget. Est placerat in egestas erat imperdiet sed euismod nisi.</p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                  <li><span>Digital Designer?</span><br>Designing Web/App interfaces</li>
+                  <li><span>Website Design</span><br>Website designing and stuff</li>
+                  <li><span>App Design</span><br>App designing and stuff</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Experience">
+                <ul>
+                  <li><span>I worked once</span><br>Illustrating for Uddevalla Kommun FSK</li>
+                  <li><span>Then I did this fun thing</span><br>Beep beep boop</li>
+                  <li><span>And lastly...</span><br>For funsies ofc</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Education">
+                <ul>
+                  <li><span>Art College</span><br>Interior and Design</li>
+                  <li><span>HDK-Valand</span><br>Konstnärlig Kandidat i Design</li>
+                  <li><span>YRGO</span><br>Digital Designer</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- ----------portfolio----------- -->
+     <div id="portfolio">
+          <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+              <div class="work">
+                <img src="images/work-1me.png">
+                <div class="layer">
+                  <h3>Project ARV</h3>
+                  <p>This is a description of the work. This is a description of the work This is a description of the work.</p>
+                  <a href="project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work">
+                <img src="images/work-2me.png">
+                <div class="layer">
+                  <h3>Infographics</h3>
+                  <p>This is a description of the work. This is a description of the work This is a description of the work.</p>
+                  <a href="project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work">
+                <img src="images/work-3me.png">
+                <div class="layer">
+                  <h3>Logotype</h3>
+                  <p>This is a description of the work. This is a description of the work This is a description of the work.</p>
+                  <a href="project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+      </div>
+     </div>
+
+
+
+    <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+  
+
+
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      
+      function openmenu(){
+        sidemenu.style.right = "0";
+
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+
+      }
+
+    </script>
+  </body>
+</html>
